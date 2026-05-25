@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tritanium SkyGrid™</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #04070f;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .card {
+      background: #07111f;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .hero-glow {
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.28), transparent 35%),
+        radial-gradient(circle at top right, rgba(249,115,22,0.22), transparent 32%),
+        radial-gradient(circle at bottom, rgba(34,197,94,0.10), transparent 35%);
+    }
+  </style>
+</head>
+
+<body class="text-white">
+
+<main class="min-h-screen">
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden px-6 py-24 md:px-16">
+
+    <div class="absolute inset-0 hero-glow"></div>
+
+    <div class="relative mx-auto max-w-7xl">
+
+      <div class="mb-6 flex flex-wrap items-center gap-4">
+
+        <div class="inline-flex rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-2 text-sm text-sky-200">
+          Tritanium SkyGrid™
+        </div>
+
+        <button
+          onclick="toggleLanguage()"
+          id="langToggle"
+          class="rounded-full border border-white/20 px-5 py-2 text-sm font-bold"
+        >
+          Español
+        </button>
+
+      </div>
+
+      <h1
+        class="max-w-5xl text-5xl font-black tracking-tight md:text-7xl"
+        data-en="Autonomous aerial infrastructure for emergency response and disaster protection."
+        data-es="Infraestructura aérea autónoma para respuesta de emergencia y protección contra desastres."
+      >
+        Autonomous aerial infrastructure for emergency response and disaster protection.
+      </h1>
+
+      <p
+        class="mt-6 max-w-3xl text-lg text-slate-300 md:text-2xl"
+        data-en="Tritanium SkyGrid™ connects drones, Sentinel Towers™, Guardian Pods™, FireSphere™ deployment systems, AeroRelay™ communications, and Nexus™ intelligence into one aerial emergency response network."
+        data-es="Tritanium SkyGrid™ conecta drones, Sentinel Towers™, Guardian Pods™, sistemas de despliegue FireSphere™, comunicaciones AeroRelay™ e inteligencia Nexus™ en una sola red aérea de respuesta de emergencia."
+      >
+        Tritanium SkyGrid™ connects drones, Sentinel Towers™, Guardian Pods™,
+        FireSphere™ deployment systems, AeroRelay™ communications, and Nexus™
+        intelligence into one aerial emergency response network.
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+
+        <a
+          href="#systems"
+          class="rounded-full bg-sky-400 px-6 py-3 font-bold text-black"
+          data-en="Explore Systems"
+          data-es="Explorar Sistemas"
+        >
+          Explore Systems
+        </a>
+
+        <a
+          href="#contact"
+          class="rounded-full border border-white/20 px-6 py-3 font-bold"
+          data-en="Partner With Us"
+          data-es="Asociarse Con Nosotros"
+        >
+          Partner With Us
+        </a>
+
+      </div>
+
+      <div class="mt-16 grid gap-6 md:grid-cols-4">
+
+        <div class="glass rounded-3xl p-7">
+          <h2 class="text-2xl font-bold text-sky-300" data-en="Detect" data-es="Detectar">Detect</h2>
+          <p
+            class="mt-3 text-slate-300"
+            data-en="Thermal drones and aerial sensors identify fire, flood, infrastructure, and emergency risks."
+            data-es="Drones térmicos y sensores aéreos identifican riesgos de incendio, inundación, infraestructura y emergencia."
+          >
+            Thermal drones and aerial sensors identify fire, flood, infrastructure, and emergency risks.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-7">
+          <h2 class="text-2xl font-bold text-orange-300" data-en="Deploy" data-es="Desplegar">Deploy</h2>
+          <p
+            class="mt-3 text-slate-300"
+            data-en="Autonomous drones deploy FireSphere™ units, supplies, communications relays, and emergency tools."
+            data-es="Drones autónomos despliegan unidades FireSphere™, suministros, relés de comunicación y herramientas de emergencia."
+          >
+            Autonomous drones deploy FireSphere™ units, supplies, communications relays, and emergency tools.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-7">
+          <h2 class="text-2xl font-bold text-cyan-300" data-en="Relay" data-es="Retransmitir">Relay</h2>
+          <p
+            class="mt-3 text-slate-300"
+            data-en="AeroRelay™ drones create emergency mesh communications when networks fail."
+            data-es="Los drones AeroRelay™ crean comunicaciones de malla de emergencia cuando las redes fallan."
+          >
+            AeroRelay™ drones create emergency mesh communications when networks fail.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-7">
+          <h2 class="text-2xl font-bold text-emerald-300" data-en="Protect" data-es="Proteger">Protect</h2>
+          <p
+            class="mt-3 text-slate-300"
+            data-en="SkyGrid™ supports firefighters, responders, infrastructure operators, and vulnerable communities."
+            data-es="SkyGrid™ apoya a bomberos, respondedores, operadores de infraestructura y comunidades vulnerables."
+          >
+            SkyGrid™ supports firefighters, responders, infrastructure operators, and vulnerable communities.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- SYSTEMS -->
+  <section id="systems" class="px-6 py-20 md:px-16">
+
+    <div class="mx-auto max-w-7xl">
+
+      <p
+        class="text-sm font-bold uppercase tracking-[0.3em] text-sky-300"
+        data-en="SkyGrid Systems"
+        data-es="Sistemas SkyGrid"
+      >
+        SkyGrid Systems
+      </p>
+
+      <h2
+        class="mt-4 max-w-5xl text-4xl font-black md:text-6xl"
+        data-en="Integrated aerial infrastructure for emergency coordination."
+        data-es="Infraestructura aérea integrada para coordinación de emergencias."
+      >
+        Integrated aerial infrastructure for emergency coordination.
+      </h2>
+
+      <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+        <!-- CARD -->
+        <div class="card rounded-3xl p-7">
+
+          <div class="mb-5 inline-flex rounded-full bg-orange-400/10 px-3 py-1 text-xs font-bold text-orange-300">
+            FIRE RESPONSE
+          </div>
+
+          <h3
+            class="text-2xl font-bold"
+            data-en="FireSphere™"
+            data-es="FireSphere™"
+          >
+            FireSphere™
+          </h3>
+
+          <p
+            class="mt-4 text-slate-400"
+            data-en="Drone-deployable fire suppression systems designed to support firefighters and emergency response operations."
+            data-es="Sistemas de supresión de incendios desplegables por drones diseñados para apoyar bomberos y operaciones de emergencia."
+          >
+            Drone-deployable fire suppression systems
+            designed to support firefighters
+            and emergency response operations.
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="card rounded-3xl p-7">
+
+          <div class="mb-5 inline-flex rounded-full bg-sky-400/10 px-3 py-1 text-xs font-bold text-sky-300">
+            COMMUNICATIONS
+          </div>
+
+          <h3
+            class="text-2xl font-bold"
+            data-en="AeroRelay™"
+            data-es="AeroRelay™"
+          >
+            AeroRelay™
+          </h3>
+
+          <p
+            class="mt-4 text-slate-400"
+            data-en="Emergency mesh communications drones capable of restoring aerial communications during outages and disasters."
+            data-es="Drones de comunicaciones de malla de emergencia capaces de restaurar comunicaciones aéreas durante apagones y desastres."
+          >
+            Emergency mesh communications drones
+            capable of restoring aerial communications
+            during outages and disasters.
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="card rounded-3xl p-7">
+
+          <div class="mb-5 inline-flex rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-300">
+            SUPPORT
+          </div>
+
+          <h3
+            class="text-2xl font-bold"
+            data-en="Guardian Drone Support"
+            data-es="Soporte Guardian Drone"
+          >
+            Guardian Drone Support
+          </h3>
+
+          <p
+            class="mt-4 text-slate-400"
+            data-en="Guardian Pods™ and Sentinel Towers™ provide charging, docking, deployment, and operational coordination."
+            data-es="Guardian Pods™ y Sentinel Towers™ proporcionan carga, acoplamiento, despliegue y coordinación operacional."
+          >
+            Guardian Pods™ and Sentinel Towers™
+            provide charging,
+            docking,
+            deployment,
+            and operational coordination.
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="card rounded-3xl p-7">
+
+          <div class="mb-5 inline-flex rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-bold text-emerald-300">
+            AI NETWORK
+          </div>
+
+          <h3
+            class="text-2xl font-bold"
+            data-en="Nexus™ Integration"
+            data-es="Integración Nexus™"
+          >
+            Nexus™ Integration
+          </h3>
+
+          <p
+            class="mt-4 text-slate-400"
+            data-en="SkyGrid™ connects directly into Tritanium Nexus™ for AI-assisted prediction, coordination, and response operations."
+            data-es="SkyGrid™ se conecta directamente con Tritanium Nexus™ para operaciones asistidas por IA de predicción, coordinación y respuesta."
+          >
+            SkyGrid™ connects directly into
+            Tritanium Nexus™ for AI-assisted prediction,
+            coordination,
+            and response operations.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WILDFIRE RESPONSE -->
+  <section class="px-6 py-20 md:px-16">
+
+    <div class="mx-auto grid max-w-7xl gap-10 rounded-[2rem] border border-orange-400/20 bg-orange-400/5 p-8 md:grid-cols-2 md:p-14">
+
+      <div>
+
+        <p
+          class="text-sm font-bold uppercase tracking-[0.3em] text-orange-300"
+          data-en="Wildfire Response"
+          data-es="Respuesta Contra Incendios"
+        >
+          Wildfire Response
+        </p>
+
+        <h2
+          class="mt-4 text-4xl font-black md:text-5xl"
+          data-en="Aerial systems designed to support firefighters and save lives."
+          data-es="Sistemas aéreos diseñados para apoyar bomberos y salvar vidas."
+        >
+          Aerial systems designed
+          to support firefighters
+          and save lives.
+        </h2>
+
+        <p
+          class="mt-6 text-slate-300"
+          data-en="SkyGrid™ combines thermal detection, drone coordination, FireSphere™ deployment, and AI-assisted wildfire prediction into one emergency aerial response system."
+          data-es="SkyGrid™ combina detección térmica, coordinación de drones, despliegue FireSphere™ y predicción de incendios asistida por IA en un solo sistema aéreo de emergencia."
+        >
+          SkyGrid™ combines thermal detection,
+          drone coordination,
+          FireSphere™ deployment,
+          and AI-assisted wildfire prediction
+          into one emergency aerial response system.
+        </p>
+
+      </div>
+
+      <div class="space-y-5">
+
+        <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+          <span class="mr-3 text-orange-300">01</span>
+
+          <span
+            data-en="Thermal wildfire detection"
+            data-es="Detección térmica de incendios"
+          >
+            Thermal wildfire detection
+          </span>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+          <span class="mr-3 text-orange-300">02</span>
+
+          <span
+            data-en="Autonomous drone deployment"
+            data-es="Despliegue autónomo de drones"
+          >
+            Autonomous drone deployment
+          </span>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+          <span class="mr-3 text-orange-300">03</span>
+
+          <span
+            data-en="FireSphere™ aerial suppression"
+            data-es="Supresión aérea FireSphere™"
+          >
+            FireSphere™ aerial suppression
+          </span>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+          <span class="mr-3 text-orange-300">04</span>
+
+          <span
+            data-en="Real-time emergency coordination"
+            data-es="Coordinación de emergencia en tiempo real"
+          >
+            Real-time emergency coordination
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+<!-- LIVE OPERATIONS -->
+  <section class="px-6 py-20 md:px-16">
+
+    <div class="mx-auto max-w-7xl">
+
+      <p
+        class="text-sm font-bold uppercase tracking-[0.3em] text-sky-300"
+        data-en="Operational Network"
+        data-es="Red Operacional"
+      >
+        Operational Network
+      </p>
+
+      <h2
+        class="mt-4 max-w-5xl text-4xl font-black md:text-6xl"
+        data-en="Coordinated aerial infrastructure in real time."
+        data-es="Infraestructura aérea coordinada en tiempo real."
+      >
+        Coordinated aerial infrastructure in real time.
+      </h2>
+
+      <div class="mt-14 grid gap-6 lg:grid-cols-2">
+
+        <!-- LEFT -->
+        <div class="glass rounded-[2rem] p-8">
+
+          <div class="mb-8 flex items-center justify-between">
+
+            <div>
+
+              <p class="text-sm uppercase tracking-[0.3em] text-sky-300">
+                SKYGRID LIVE
+              </p>
+
+              <h3
+                class="mt-3 text-3xl font-black"
+                data-en="Aerial Operations Status"
+                data-es="Estado de Operaciones Aéreas"
+              >
+                Aerial Operations Status
+              </h3>
+
+            </div>
+
+            <div class="flex items-center gap-2">
+
+              <div class="h-3 w-3 rounded-full bg-emerald-400"></div>
+
+              <span
+                class="text-sm text-emerald-300"
+                data-en="Connected"
+                data-es="Conectado"
+              >
+                Connected
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="space-y-5">
+
+            <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+
+              <div class="mb-2 flex items-center justify-between">
+
+                <span class="font-bold text-orange-300">
+                  FireSphere™ Units
+                </span>
+
+                <span class="text-sm text-orange-300">
+                  Armed
+                </span>
+
+              </div>
+
+              <div class="h-2 rounded-full bg-white/10">
+                <div class="h-2 w-[81%] rounded-full bg-orange-400"></div>
+              </div>
+
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+
+              <div class="mb-2 flex items-center justify-between">
+
+                <span class="font-bold text-sky-300">
+                  AeroRelay™ Mesh
+                </span>
+
+                <span class="text-sm text-sky-300">
+                  Online
+                </span>
+
+              </div>
+
+              <div class="h-2 rounded-full bg-white/10">
+                <div class="h-2 w-[92%] rounded-full bg-sky-400"></div>
+              </div>
+
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+
+              <div class="mb-2 flex items-center justify-between">
+
+                <span class="font-bold text-cyan-300">
+                  Nexus™ Coordination
+                </span>
+
+                <span class="text-sm text-cyan-300">
+                  Active
+                </span>
+
+              </div>
+
+              <div class="h-2 rounded-full bg-white/10">
+                <div class="h-2 w-[95%] rounded-full bg-cyan-400"></div>
+              </div>
+
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+
+              <div class="mb-2 flex items-center justify-between">
+
+                <span class="font-bold text-emerald-300">
+                  Guardian Support
+                </span>
+
+                <span class="text-sm text-emerald-300">
+                  Stable
+                </span>
+
+              </div>
+
+              <div class="h-2 rounded-full bg-white/10">
+                <div class="h-2 w-[89%] rounded-full bg-emerald-400"></div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="grid gap-6">
+
+          <div class="card rounded-[2rem] p-8">
+
+            <div class="mb-5 inline-flex rounded-full bg-sky-400/10 px-3 py-1 text-xs font-bold text-sky-300">
+              AERIAL INTELLIGENCE
+            </div>
+
+            <h3
+              class="text-3xl font-black"
+              data-en="SkyGrid™ Monitoring"
+              data-es="Monitoreo SkyGrid™"
+            >
+              SkyGrid™ Monitoring
+            </h3>
+
+            <p
+              class="mt-5 text-slate-400"
+              data-en="SkyGrid™ continuously analyzes thermal signatures, wildfire growth, weather conditions, emergency communications, and aerial infrastructure telemetry."
+              data-es="SkyGrid™ analiza continuamente firmas térmicas, crecimiento de incendios, condiciones climáticas, comunicaciones de emergencia y telemetría aérea."
+            >
+              SkyGrid™ continuously analyzes
+              thermal signatures,
+              wildfire growth,
+              weather conditions,
+              emergency communications,
+              and aerial infrastructure telemetry.
+            </p>
+
+          </div>
+
+          <div class="card rounded-[2rem] p-8">
+
+            <div class="mb-5 inline-flex rounded-full bg-orange-400/10 px-3 py-1 text-xs font-bold text-orange-300">
+              EMERGENCY RESPONSE
+            </div>
+
+            <h3
+              class="text-3xl font-black"
+              data-en="Rapid Deployment"
+              data-es="Despliegue Rápido"
+            >
+              Rapid Deployment
+            </h3>
+
+            <p
+              class="mt-5 text-slate-400"
+              data-en="Autonomous aerial systems designed to rapidly deploy communications, suppression systems, emergency supplies, and infrastructure support."
+              data-es="Sistemas aéreos autónomos diseñados para desplegar rápidamente comunicaciones, sistemas de supresión, suministros de emergencia y soporte de infraestructura."
+            >
+              Autonomous aerial systems
+              designed to rapidly deploy
+              communications,
+              suppression systems,
+              emergency supplies,
+              and infrastructure support.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- GLOBAL AERIAL NETWORK -->
+  <section class="px-6 py-20 md:px-16">
+
+    <div class="mx-auto max-w-7xl rounded-[2rem] border border-sky-400/20 bg-sky-400/5 p-8 md:p-14">
+
+      <p
+        class="text-sm font-bold uppercase tracking-[0.3em] text-sky-300"
+        data-en="Global Aerial Infrastructure"
+        data-es="Infraestructura Aérea Global"
+      >
+        Global Aerial Infrastructure
+      </p>
+
+      <h2
+        class="mt-4 max-w-5xl text-4xl font-black md:text-6xl"
+        data-en="Designed for emergency coordination across regions, infrastructure corridors, and vulnerable environments."
+        data-es="Diseñado para coordinación de emergencia en regiones, corredores de infraestructura y entornos vulnerables."
+      >
+        Designed for emergency coordination
+        across regions,
+        infrastructure corridors,
+        and vulnerable environments.
+      </h2>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+        <div class="glass rounded-3xl p-7">
+
+          <h3
+            class="text-2xl font-bold text-sky-300"
+            data-en="Aerial Monitoring"
+            data-es="Monitoreo Aéreo"
+          >
+            Aerial Monitoring
+          </h3>
+
+          <p
+            class="mt-4 text-slate-400"
+            data-en="Thermal and environmental awareness systems for infrastructure and disaster monitoring."
+            data-es="Sistemas térmicos y ambientales para monitoreo de infraestructura y desastres."
+          >
+            Thermal and environmental awareness systems
+            for infrastructure and disaster monitoring.
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-7">
+
+          <h3
+            class="text-2xl font-bold text-orange-300"
+            data-en="Wildfire Response"
+            data-es="Respuesta Contra Incendios"
+          >
+            Wildfire Response
+          </h3>
+
+          <p
+            class="mt-4 text-slate-400"
+            data-en="Drone-assisted suppression and emergency support systems for wildfire operations."
+            data-es="Sistemas de supresión asistidos por drones y soporte de emergencia para operaciones contra incendios."
+          >
+            Drone-assisted suppression
+            and emergency support systems
+            for wildfire operations.
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-7">
+
+          <h3
+            class="text-2xl font-bold text-cyan-300"
+            data-en="Emergency Communications"
+            data-es="Comunicaciones de Emergencia"
+          >
+            Emergency Communications
+          </h3>
+
+          <p
+            class="mt-4 text-slate-400"
+            data-en="Aerial mesh communications designed to restore connectivity during outages and disasters."
+            data-es="Comunicaciones aéreas en malla diseñadas para restaurar conectividad durante apagones y desastres."
+          >
+            Aerial mesh communications designed
+            to restore connectivity during outages and disasters.
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-7">
+
+          <h3
+            class="text-2xl font-bold text-emerald-300"
+            data-en="Infrastructure Support"
+            data-es="Soporte de Infraestructura"
+          >
+            Infrastructure Support
+          </h3>
+
+          <p
+            class="mt-4 text-slate-400"
+            data-en="Autonomous drone support for infrastructure inspection, logistics, monitoring, and emergency continuity."
+            data-es="Soporte autónomo con drones para inspección de infraestructura, logística, monitoreo y continuidad de emergencia."
+          >
+            Autonomous drone support
+            for infrastructure inspection,
+            logistics,
+            monitoring,
+            and emergency continuity.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- CONTACT -->
+  <section id="contact" class="px-6 py-20 md:px-16">
+
+    <div class="mx-auto max-w-7xl rounded-[2rem] bg-gradient-to-r from-sky-400 to-orange-400 p-10 text-black md:p-14">
+
+      <h2
+        class="text-4xl font-black md:text-5xl"
+        data-en="Ready for emergency, infrastructure, and strategic partnerships."
+        data-es="Listos para alianzas de emergencia, infraestructura y estratégicas."
+      >
+        Ready for emergency, infrastructure, and strategic partnerships.
+      </h2>
+
+      <p
+        class="mt-4 max-w-4xl text-lg font-medium"
+        data-en="Tritanium SkyGrid™ is being developed to support aerial emergency coordination, wildfire response, autonomous drone infrastructure, emergency communications, and rapid-response deployment systems."
+        data-es="Tritanium SkyGrid™ está siendo desarrollado para respaldar coordinación aérea de emergencia, respuesta contra incendios, infraestructura autónoma de drones, comunicaciones de emergencia y sistemas de despliegue rápido."
+      >
+        Tritanium SkyGrid™ is being developed
+        to support aerial emergency coordination,
+        wildfire response,
+        autonomous drone infrastructure,
+        emergency communications,
+        and rapid-response deployment systems.
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+
+        <a
+          href="mailto:info@tritaniumcorp.com"
+          class="rounded-full bg-black px-6 py-3 font-bold text-white"
+          data-en="Contact Tritanium"
+          data-es="Contactar Tritanium"
+        >
+          Contact Tritanium
+        </a>
+
+        <a
+          href="https://tritaniumcorp.com"
+          class="rounded-full border border-black/20 px-6 py-3 font-bold"
+          data-en="Visit Tritanium"
+          data-es="Visitar Tritanium"
+        >
+          Visit Tritanium
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 px-6 py-10 text-sm text-slate-500 md:px-16">
+
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 md:flex-row md:items-center md:justify-between">
+
+      <p>Tritanium SkyGrid™</p>
+
+      <p
+        data-en="Autonomous Aerial Infrastructure • Emergency Response Systems"
+        data-es="Infraestructura Aérea Autónoma • Sistemas de Respuesta de Emergencia"
+      >
+        Autonomous Aerial Infrastructure • Emergency Response Systems
+      </p>
+
+      <p>© 2026 The Tritanium Corporation</p>
+
+    </div>
+
+  </footer>
+
+</main>
+
+<script>
+
+  let currentLang = "en";
+
+  function toggleLanguage() {
+
+    currentLang =
+      currentLang === "en"
+        ? "es"
+        : "en";
+
+    document
+      .querySelectorAll("[data-en]")
+      .forEach((el) => {
+
+        el.innerHTML =
+          currentLang === "en"
+            ? el.getAttribute("data-en")
+            : el.getAttribute("data-es");
+
+      });
+
+    document
+      .getElementById("langToggle")
+      .innerText =
+        currentLang === "en"
+          ? "Español"
+          : "English";
+
+    document.documentElement.lang =
+      currentLang;
+
+  }
+
+</script>
+
+</body>
+</html>
